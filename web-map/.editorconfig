@@ -1,0 +1,8 @@
+# Editor configuration, see http://editorconfig.org
+
+# not root, see parent dir
+
+[*]
+charset = utf-8
+indent_size = 4
+insert_final_newline = true

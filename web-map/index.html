@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Micromobility</title>
+    <script
+        src="main.js"
+        defer
+    ></script>
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+    <div
+        id="map"
+        class="map"
+    ></div>
+    <form
+        id="scooterForm"
+        class="form-inline"
+    >
+        <div class="form-group">
+            <label for="numberOfScooters">Show X scooters</label>
+            <input
+                type="number"
+                id="numberOfScooters"
+                value="100"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="searchRadiusMeters">Radius (meters)</label>
+            <input
+                type="number"
+                id="searchRadiusMeters"
+                value="10000"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="landmarkLongitude">Landmark longitude</label>
+            <input
+                type="number"
+                id="landmarkLongitude"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="landmarkLatitude">Landmark latitude</label>
+            <input
+                type="number"
+                id="landmarkLatitude"
+            >
+        </div>
+
+        <button type="button">Find scooters</button>
+    </form>
+</body>
+
+</html>

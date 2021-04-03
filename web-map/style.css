@@ -1,0 +1,16 @@
+.map {
+    width: 100%;
+    height: 90vh;
+}
+
+form {
+    margin-top: 15px;
+}
+
+.form-inline .form-group {
+    display: inline-block;
+}
+
+.form-group {
+    margin-right: 15px;
+}
