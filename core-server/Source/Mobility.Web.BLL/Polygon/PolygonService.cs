@@ -64,7 +64,7 @@ namespace Mobility.Web.BLL.Polygon
                 prevValue = nextValue;
             }
 
-            // [area1, area1 + aera2, area1 + area2 + area3, ...]
+            // [area1, area1 + area2, area1 + area2 + area3, ...]
             return cumulativeDistribution;
         }
 

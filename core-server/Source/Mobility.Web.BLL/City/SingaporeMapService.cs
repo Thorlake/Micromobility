@@ -21,6 +21,8 @@ namespace Mobility.Web.BLL.Polygon.City
                 new Point(103.6045074f, 1.2228228f)
             };
 
+            // TODO: move array reversing to polygon transformation before triangulation 
+
             // keep points oriented clockwise 
             Array.Reverse(points);
             return points;

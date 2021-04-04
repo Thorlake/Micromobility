@@ -20,8 +20,8 @@ namespace Mobility.Web.BLL.Polygon
             var trianglePoints = new[] { LeftPoint, CurrentPoint, RightPoint };
             int lastTrianglePointIndex = trianglePoints.Length - 1;
 
-            // Get the angle between the point and the
-            // first and last vertices.
+            // Get the angle between the point and 
+            // the first and last vertices.
             float angle = GetAngle(
                 trianglePoints[lastTrianglePointIndex],
                 point,
@@ -37,10 +37,10 @@ namespace Mobility.Web.BLL.Polygon
                     trianglePoints[i + 1]);
             }
 
-            // The total angle should be 2 * PI or -2 * PI if
-            // the point is in the polygon and close to zero
-            // if the point is outside the polygon.
-            return (Math.Abs(angle) > 1);
+            // The total angle should be
+            //   2 * PI or -2 * PI - if the point is in the polygon
+            //   close to zero - if the point is outside the polygon
+            return Math.Abs(angle) > 1;
         }
     }
 }

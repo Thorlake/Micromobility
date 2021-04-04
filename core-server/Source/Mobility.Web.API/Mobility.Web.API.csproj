@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Mobility.Web.BLL\Mobility.Web.BLL.csproj" />
+    <ProjectReference Include="..\Mobility.Web.DAL\Mobility.Web.DAL.csproj" />
   </ItemGroup>
 
 

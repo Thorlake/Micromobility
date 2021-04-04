@@ -1,10 +1,13 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Mobility.Web.BLL.Polygon;
 using Mobility.Web.BLL.Polygon.City;
+using Mobility.Web.DAL;
+using Mobility.Web.DAL.Repositories;
 
 namespace Mobility.Web.API
 {
@@ -20,7 +23,10 @@ namespace Mobility.Web.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<MobilityDbContext>(opt => opt.UseInMemoryDatabase("scooter"));
             services.AddSingleton<PolygonService>();
+            services.AddScoped<ScooterLocationService>();
+            services.AddScoped<ScooterLocationRepository>();
             services.AddSingleton<ICityMapService, SingaporeMapService>();
         }
 
